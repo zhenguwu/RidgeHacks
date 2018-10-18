@@ -1,0 +1,2 @@
+# RidgeHacks
+RidgeHacks Website
