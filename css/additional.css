@@ -1,0 +1,11 @@
+.nav-link:hover {
+	background-color: #fff;
+	color: black!important;
+}
+.nav-link {
+	transition: color 1s, background-color 1s;
+	-webkit-transition: color 1s, background-color 1s;
+}
+.cta-none {
+	border-width: 0!important;
+}
