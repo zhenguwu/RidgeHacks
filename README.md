@@ -1,4 +1,4 @@
 # RidgeHacks
 RidgeHacks Website
 
-Make commits in Tentative Branch and pull request.
+## Make commits in Tentative Branch and pull request.
