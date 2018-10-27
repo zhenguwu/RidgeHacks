@@ -1,0 +1,24 @@
+{
+  "name": "ridgehacks",
+  "version": "0.1.0",
+  "description": "Website for RidgeHacks 2019",
+  "private": true,
+  "main": ".src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cosmic-Goat/RidgeHacks.git"
+  },
+  "author": "Michael Wu",
+  "license": "CC BY 3.0",
+  "bugs": {
+    "url": "https://github.com/Cosmic-Goat/RidgeHacks/issues"
+  },
+  "homepage": "https://github.com/Cosmic-Goat/RidgeHacks#readme",
+  "devDependencies": {
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
