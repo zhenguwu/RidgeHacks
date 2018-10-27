@@ -18,12 +18,14 @@ require("./particle.js");
 require("./scrollax.min.js");
 
 
-AOS.init({
-	duration: 800,
-	easing: 'slide'
-});
+
 
 (function ($) {
+
+	AOS.init({
+		duration: 800,
+		easing: 'slide'
+	});
 
 	"use strict";
 

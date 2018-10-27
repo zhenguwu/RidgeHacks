@@ -1,10 +1,45 @@
 var webpack = require("webpack");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
 
-	entry: './src/main.js',
-	module: {
+	entry: './src/js/main.js',
 
+	optimization: {
+		minimizer: [
+			new UglifyJsPlugin({
+				cache: true,
+				parallel: true,
+				sourceMap: true // set to true if you want JS source maps
+			}),
+			new OptimizeCSSAssetsPlugin({})
+		],
+		splitChunks: {
+			cacheGroups: {
+				styles: {
+					name: 'styles',
+					test: /\.css$/,
+					chunks: 'all',
+					enforce: true
+				}
+			}
+		}
+	},
+
+	plugins: [
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery",
+			'window.jQuery': 'jquery',
+			Popper: ['popper.js', 'default']
+		}),
+
+		new MiniCssExtractPlugin({})
+	],
+
+	module: {
 		rules: [{
 			test: /\.js$/,
 			parser: {
@@ -13,15 +48,7 @@ module.exports = {
 		},
 		{
 			test: /\.css$/,
-			use: ['style-loader', 'css-loader']
+			use: [MiniCssExtractPlugin.loader, 'css-loader']
 		}]
-	},
-	plugins: [
-		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery",
-			'window.jQuery': 'jquery',
-			Popper: ['popper.js', 'default']
-		})
-	]
+	}
 }
