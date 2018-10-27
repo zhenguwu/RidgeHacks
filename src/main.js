@@ -1,3 +1,24 @@
+require("jquery")
+require("jquery-migrate")
+
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+require("jquery-waypoints/waypoints");
+
+require("./jquery.easing.1.3.js");
+require("./jquery.stellar.min.js");
+require("./jquery.magnific-popup.min.js");
+require("./jquery.animateNumber.min.js");
+require("./bootstrap-datepicker.js");
+require("./owl.carousel.min.js");
+require("./particles.min.js");
+require("./particle.js");
+require("./scrollax.min.js");
+
+
  AOS.init({
  	duration: 800,
  	easing: 'slide'
