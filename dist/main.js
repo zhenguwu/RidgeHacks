@@ -20275,52 +20275,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery_migrate__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery_migrate__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var jquery_waypoints_waypoints__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery-waypoints/waypoints */ "./node_modules/jquery-waypoints/waypoints.js");
 /* harmony import */ var jquery_waypoints_waypoints__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery_waypoints_waypoints__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var popper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js");
-/* harmony import */ var _jquery_anchorScroll_min_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./jquery.anchorScroll.min.js */ "./src/js/jquery.anchorScroll.min.js");
-/* harmony import */ var _jquery_anchorScroll_min_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_jquery_anchorScroll_min_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _jquery_easing_1_3_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./jquery.easing.1.3.js */ "./src/js/jquery.easing.1.3.js");
-/* harmony import */ var _jquery_easing_1_3_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_jquery_easing_1_3_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _jquery_stellar_min_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./jquery.stellar.min.js */ "./src/js/jquery.stellar.min.js");
-/* harmony import */ var _jquery_stellar_min_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_jquery_stellar_min_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _jquery_animateNumber_min_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./jquery.animateNumber.min.js */ "./src/js/jquery.animateNumber.min.js");
-/* harmony import */ var _jquery_animateNumber_min_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_jquery_animateNumber_min_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _jquery_magnific_popup_min_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./jquery.magnific-popup.min.js */ "./src/js/jquery.magnific-popup.min.js");
-/* harmony import */ var _jquery_magnific_popup_min_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_jquery_magnific_popup_min_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _css_magnific_popup_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../css/magnific-popup.css */ "./src/css/magnific-popup.css");
-/* harmony import */ var _css_magnific_popup_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_css_magnific_popup_css__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _css_jquery_timepicker_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../css/jquery.timepicker.css */ "./src/css/jquery.timepicker.css");
-/* harmony import */ var _css_jquery_timepicker_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_css_jquery_timepicker_css__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
-/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _bootstrap_datepicker_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./bootstrap-datepicker.js */ "./src/js/bootstrap-datepicker.js");
-/* harmony import */ var _bootstrap_datepicker_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_bootstrap_datepicker_js__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _css_bootstrap_datepicker_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../css/bootstrap-datepicker.css */ "./src/css/bootstrap-datepicker.css");
-/* harmony import */ var _css_bootstrap_datepicker_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_css_bootstrap_datepicker_css__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _owl_carousel_min_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./owl.carousel.min.js */ "./src/js/owl.carousel.min.js");
-/* harmony import */ var _owl_carousel_min_js__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_owl_carousel_min_js__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _particles_min_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./particles.min.js */ "./src/js/particles.min.js");
-/* harmony import */ var _particles_min_js__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_particles_min_js__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _particle_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./particle.js */ "./src/js/particle.js");
-/* harmony import */ var _particle_js__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_particle_js__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _scrollax_min_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./scrollax.min.js */ "./src/js/scrollax.min.js");
-/* harmony import */ var _scrollax_min_js__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_scrollax_min_js__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _css_animate_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../css/animate.css */ "./src/css/animate.css");
-/* harmony import */ var _css_animate_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_css_animate_css__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../css/style.css */ "./src/css/style.css");
-/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _css_additional_css__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../css/additional.css */ "./src/css/additional.css");
-/* harmony import */ var _css_additional_css__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_css_additional_css__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _jquery_anchorScroll_min_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./jquery.anchorScroll.min.js */ "./src/js/jquery.anchorScroll.min.js");
+/* harmony import */ var _jquery_anchorScroll_min_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_jquery_anchorScroll_min_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _jquery_easing_1_3_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./jquery.easing.1.3.js */ "./src/js/jquery.easing.1.3.js");
+/* harmony import */ var _jquery_easing_1_3_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_jquery_easing_1_3_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _jquery_stellar_min_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./jquery.stellar.min.js */ "./src/js/jquery.stellar.min.js");
+/* harmony import */ var _jquery_stellar_min_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_jquery_stellar_min_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _jquery_animateNumber_min_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./jquery.animateNumber.min.js */ "./src/js/jquery.animateNumber.min.js");
+/* harmony import */ var _jquery_animateNumber_min_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_jquery_animateNumber_min_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _jquery_magnific_popup_min_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./jquery.magnific-popup.min.js */ "./src/js/jquery.magnific-popup.min.js");
+/* harmony import */ var _jquery_magnific_popup_min_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_jquery_magnific_popup_min_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _css_magnific_popup_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../css/magnific-popup.css */ "./src/css/magnific-popup.css");
+/* harmony import */ var _css_magnific_popup_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_css_magnific_popup_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _css_jquery_timepicker_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../css/jquery.timepicker.css */ "./src/css/jquery.timepicker.css");
+/* harmony import */ var _css_jquery_timepicker_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_css_jquery_timepicker_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _bootstrap_datepicker_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./bootstrap-datepicker.js */ "./src/js/bootstrap-datepicker.js");
+/* harmony import */ var _bootstrap_datepicker_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_bootstrap_datepicker_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _css_bootstrap_datepicker_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../css/bootstrap-datepicker.css */ "./src/css/bootstrap-datepicker.css");
+/* harmony import */ var _css_bootstrap_datepicker_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_css_bootstrap_datepicker_css__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _owl_carousel_min_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./owl.carousel.min.js */ "./src/js/owl.carousel.min.js");
+/* harmony import */ var _owl_carousel_min_js__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_owl_carousel_min_js__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _particles_min_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./particles.min.js */ "./src/js/particles.min.js");
+/* harmony import */ var _particles_min_js__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_particles_min_js__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _particle_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./particle.js */ "./src/js/particle.js");
+/* harmony import */ var _particle_js__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_particle_js__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _scrollax_min_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./scrollax.min.js */ "./src/js/scrollax.min.js");
+/* harmony import */ var _scrollax_min_js__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_scrollax_min_js__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _css_animate_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../css/animate.css */ "./src/css/animate.css");
+/* harmony import */ var _css_animate_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_css_animate_css__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../css/style.css */ "./src/css/style.css");
+/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _css_additional_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../css/additional.css */ "./src/css/additional.css");
+/* harmony import */ var _css_additional_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_css_additional_css__WEBPACK_IMPORTED_MODULE_22__);
 
 
 
-
-
+//import "popper.js"
 
 
 
@@ -20351,7 +20349,7 @@ __webpack_require__.r(__webpack_exports__);
 
 (function ($) {
 
-	aos__WEBPACK_IMPORTED_MODULE_15___default.a.init({
+	aos__WEBPACK_IMPORTED_MODULE_14___default.a.init({
 		duration: 800,
 		easing: 'slide'
 	});
@@ -20562,7 +20560,6 @@ __webpack_require__.r(__webpack_exports__);
 				setTimeout(function () {
 
 					$('body .ftco-animate.item-animate').each(function (k) {
-						console.log("setrst");
 						var el = $(this);
 						setTimeout(function () {
 							var effect = el.data('animate-effect');
