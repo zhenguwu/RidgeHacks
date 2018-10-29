@@ -1,24 +1,35 @@
 import "jquery";
 import "jquery-migrate";
 import "jquery-waypoints/waypoints";
+
+import "popper.js"
+
+import "./jquery.anchorScroll.min.js";
+import "./jquery.easing.1.3.js";
+import "./jquery.stellar.min.js";
+import "./jquery.animateNumber.min.js";
+import "./jquery.magnific-popup.min.js";
+import "../css/magnific-popup.css"
+import "../css/jquery.timepicker.css"
+
+
 import "bootstrap";
+import "./bootstrap-datepicker.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../css/bootstrap-datepicker.css"
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-require("./jquery.anchorScroll.min.js");
-require("./jquery.easing.1.3.js");
-require("./jquery.stellar.min.js");
-require("./jquery.magnific-popup.min.js");
-require("./jquery.animateNumber.min.js");
-require("./bootstrap-datepicker.js");
-require("./owl.carousel.min.js");
-require("./particles.min.js");
-require("./particle.js");
-require("./scrollax.min.js");
+import "./owl.carousel.min.js";
 
+import "./particles.min.js";
+import "./particle.js";
+import "./scrollax.min.js";
 
-
+import "../css/animate.css";
+import "../css/style.css";
+import "../css/additional.css"
 
 (function ($) {
 
@@ -225,14 +236,15 @@ require("./scrollax.min.js");
 		var i = 0;
 		$('.ftco-animate').waypoint(function (direction) {
 
-			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+			if (direction === 'down' && !$(this).hasClass('ftco-animated')) {
 
 				i++;
 
-				$(this.element).addClass('item-animate');
+				$(this).addClass('item-animate');
 				setTimeout(function () {
 
 					$('body .ftco-animate.item-animate').each(function (k) {
+						console.log("setrst");
 						var el = $(this);
 						setTimeout(function () {
 							var effect = el.data('animate-effect');
