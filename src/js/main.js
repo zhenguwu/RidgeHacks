@@ -244,7 +244,6 @@ import "../css/additional.css"
 				setTimeout(function () {
 
 					$('body .ftco-animate.item-animate').each(function (k) {
-						console.log("setrst");
 						var el = $(this);
 						setTimeout(function () {
 							var effect = el.data('animate-effect');
