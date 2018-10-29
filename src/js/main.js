@@ -1,7 +1,6 @@
 import "jquery";
 import "jquery-migrate";
 import "jquery-waypoints/waypoints";
-//import "popper.js"
 
 import "./jquery.anchorScroll.min.js";
 import "./jquery.easing.1.3.js";
