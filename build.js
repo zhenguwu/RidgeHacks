@@ -4,6 +4,10 @@ var minify = require('html-minifier').minify;
 // Minify index.html
 minifyHTML("src/index.html");
 
+
+
+
+
 function minifyHTML(src) {
     fs.readFile(src, "utf8", function(err, data) {
         if (err) throw err;
