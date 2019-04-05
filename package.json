@@ -2,7 +2,7 @@
   "name": "ridgehacks",
   "version": "1.0.0",
   "description": "RidgeHacks Website",
-  "main": "index.js",
+  "main": "build.js",
   "dependencies": {
     "cssnano": "^4.1.10",
     "html-minifier": "^4.0.0",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
