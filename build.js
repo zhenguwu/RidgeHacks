@@ -6,7 +6,7 @@ const autoprefixer = require('cssnano')
 const postcss = require('postcss')
 
 // Minify index.html
-//minifyHTML("src/index.html");
+minifyHTML("src/index.html");
 
 // Find all CSS files
 fromDir('./src', /\.css$/, minifyCSS);
@@ -44,7 +44,7 @@ function minifyHTML(src) {
 
         fs.writeFile("dist/index.html", htmlResult, "utf8", (err) => {
             if (err) throw err;
-            console.log("index.html has been minified.");
+            console.log("index.html has been minified.\n");
         });
     });
 }
