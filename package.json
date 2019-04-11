@@ -1,0 +1,25 @@
+{
+  "name": "ridgehacks",
+  "version": "1.0.0",
+  "description": "RidgeHacks Website",
+  "main": "build.js",
+  "dependencies": {
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "uglify-js": "^3.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cosmic-Goat/RidgeHacks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cosmic-Goat/RidgeHacks/issues"
+  },
+  "homepage": "https://github.com/Cosmic-Goat/RidgeHacks#readme"
+}
