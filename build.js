@@ -5,26 +5,50 @@ const path = require("path")
 const autoprefixer = require('cssnano')
 const postcss = require('postcss')
 
+const UglifyJS = require("uglify-js");
+
+// Turn off variable name mangling, the default of true messes up some of the js libraries.
+const UglifyOptions = {
+    mangle: {
+        properties: false,
+    }
+};
+
 // Minify index.html
 minifyHTML("src/index.html");
 
-// Find all CSS files
+// Find and minify all CSS files
 fromDir('./src', /\.css$/, minifyCSS);
 
+// Find and minify all JS files.
+fromDir('./src', /\.js$/, minifyJS);
+
+function minifyJS(src) {
+    const outputPath = "dist" + src.substring(3);
+
+    fs.readFile(src, "utf8", (err, js) => {
+        if (err) throw err;
+        console.log("\t\tWriting " + outputPath);
+        fs.writeFile(outputPath, UglifyJS.minify(js, UglifyOptions).code, (err) => { if (err) throw err; })
+    })
+}
+
 function minifyCSS(src) {
-    const output = "dist" + src.substring(3);
+    const outputPath = "dist" + src.substring(3);
 
     fs.readFile(src, (err, css) => {
+        if (err) throw err;
+
         postcss([autoprefixer])
-            .process(css, { from: src, to: output })
+            .process(css, { from: src, to: outputPath })
             .then(result => {
-                fs.writeFile(output, result.css, () => true)
-                console.log("\t\tWriting " + output);
+                console.log("\t\tWriting " + outputPath);
+                fs.writeFile(outputPath, result.css, (err) => { if (err) throw err; })
                 if (result.map) {
-                    fs.writeFile(output, result.map, () => true)
+                    fs.writeFile(outputPath, result.map, (err) => { if (err) throw err; })
                 }
-            })
-    })
+            });
+    });
 }
 
 function minifyHTML(src) {
