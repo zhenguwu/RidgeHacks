@@ -4,6 +4,7 @@
   "description": "RidgeHacks Website",
   "main": "build.js",
   "dependencies": {
+    "async": "^3.0.1-0",
     "cssnano": "^4.1.10",
     "find": "^0.3.0",
     "html-minifier": "^4.0.0",
