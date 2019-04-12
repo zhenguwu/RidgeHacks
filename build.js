@@ -1,15 +1,12 @@
 var fs = require("fs");
-var minify = require('html-minifier').minify;
 var path = require("path")
-
-var autoprefixer = require('cssnano')
-var postcss = require('postcss')
-
+var minify = require("html-minifier").minify;
+var autoprefixer = require("cssnano")
+var postcss = require("postcss")
 var UglifyJS = require("uglify-js");
-
-var find = require('find');
-
+var find = require("find");
 var async = require("async");
+var ncp = require("ncp").ncp;
 
 // Turn off variable name mangling, the default of true messes up some of the js libraries.
 const UglifyOptions = {
@@ -30,20 +27,29 @@ const HTML_minifyOptions = {
     useShortDoctype: true
 }
 
-// Minify index.html
-//minifyHTML("src/index.html");
 
-// Minify files in paralell by running their respective functions async 
-async.parallel([
-    minifyFiles(/\.html$/, minifyHTML),
-    minifyFiles(/\.css$/, minifyCSS),
-    minifyFiles(/\.js/, minifyJS)
-]).catch((err) => { if (err.message !== "expected a function") console.error(err) });
+// Copy all files in ./src in order to transfer static files to dist as well as the minified ones.
+ncp("./src", "./dist", (err) => {
+
+    // On copying completion:
+    if (err) {
+        return console.error(err);
+    }
+
+    console.log("Finished copying.")
+    // Minify files in parallel by running their respective functions async 
+    async.parallel([
+        minifyFiles(/\.html$/, minifyHTML),
+        minifyFiles(/\.css$/, minifyCSS),
+        minifyFiles(/\.js/, minifyJS)
+    ]).catch((err) => { if (err.message !== "expected a function") console.error(err) });
+});
+
 
 
 // Wrapper function that finds files and creates an async queue to pass them onto minification functions
 async function minifyFiles(filter, minificationFunction) {
-    find.file(filter, './src', (files) => {
+    find.file(filter, "./src", (files) => {
 
         try {
             var queue = async.queue(minificationFunction, files.length);
