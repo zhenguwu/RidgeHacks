@@ -5,6 +5,7 @@
   "main": "build.js",
   "dependencies": {
     "cssnano": "^4.1.10",
+    "find": "^0.3.0",
     "html-minifier": "^4.0.0",
     "uglify-js": "^3.5.4"
   },
