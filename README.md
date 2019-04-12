@@ -9,4 +9,6 @@ Uses node libraries to minify html, javascript and css. Requires Nodejs and npm.
 1. Run `npm install` in your shell to download required node modules.
 2. Create and edit source html, javascript, and css files in the /src folder.
 3. Add any static files such as images and fonts to the /dist folder.
-4. Do `npm run build` in your shell to minify html and css, they will be output to the /dist folder with the same name. 
+4. Do `npm run build` in your shell to minify html, javascript and css, they will be output to the /dist folder with the same name. 
+
+You can add static files to the /src folder so that you can test the site without having to rebuild everytime, but you'll have to remember to copy those files to the /dist folder.
