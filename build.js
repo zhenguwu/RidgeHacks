@@ -5,7 +5,6 @@ var postcss = require("postcss")
 var UglifyJS = require("uglify-js");
 var find = require("find");
 var async = require("async");
-var ncp = require("ncp").ncp;
 
 // Turn off variable name mangling, the default of true messes up some of the js libraries.
 const UglifyOptions = {
@@ -26,16 +25,26 @@ const HTML_minifyOptions = {
     useShortDoctype: true
 }
 
-// Minify files in parallel by running their respective functions async
+
+// Minify and copy files in parallel by running their respective functions async
 async.parallel([
-    // Copy all files that do not end in .js, .css or .html in ./src in order to transfer static files to ./dist as well as the minified ones.
-    ncp("./src", "./dist", { filter: /.+(?<!.js|.css|.html)$/ }, (err) => { if (err) { throw err; } else { console.log("Finished copying."); } }),
-    // Minify files
+    copyStaticFiles(),
     minifyFiles(/\.html$/, minifyHTML),
     minifyFiles(/\.css$/, minifyCSS),
-    minifyFiles(/\.js/, minifyJS)
+    minifyFiles(/\.js$/, minifyJS)
 ]).catch((err) => { if (err.message !== "expected a function") console.error(err) });
 
+async function copyStaticFiles() {
+    try {
+        await fse.copy('./src', './dist', {
+            // Returns true for all files that do not end in .js, .css or .html
+            filter: (src, dest) => { return !(/\.css$/.test(src) || /\.js$/.test(src) || /\.html$/.test(src)); }
+        });
+        console.log('Finished copying static files.');
+    } catch (err) {
+        console.error(err);
+    }
+}
 
 // Wrapper function that finds files and creates an async queue to pass them onto minification functions
 async function minifyFiles(filter, minificationFunction) {
