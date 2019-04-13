@@ -36,7 +36,7 @@ async.parallel([
     minifyFiles(/\.html$/, minifyHTML),
     minifyFiles(/\.css$/, minifyCSS),
     minifyFiles(/\.js$/, minifyJS)
-]).catch((err) => { if (err.message !== "") console.error(err) });
+]).catch((err) => { if (err.message !== "expected a function") console.error(err) });
 
 
 async function copyStaticFiles() {
@@ -75,31 +75,30 @@ async function minifyFiles(filter, minificationFunction) {
 async function minifyHTML(src) {
     const outputPath = "dist" + src.substring(3);
 
-    fse.readFile(src, "utf8", function (err, data) {
-        if (err) throw err;
-        var htmlResult = minify(data, HTML_minifyOptions);
-
-        fse.outputFile("dist/index.html", htmlResult, "utf8", (err) => {
-            if (err) throw err;
-            console.log("minifyHTML:\tOutput minified HTML " + outputPath);
-        });
-    });
+    try {
+        const data = await fse.readFile(src, "utf8");
+        const htmlResult = minify(data, HTML_minifyOptions);
+        await fse.outputFile(outputPath, htmlResult, "utf8");
+        console.log("Output minified HTML:\t" + outputPath);
+    } catch (err) {
+        console.error("Error at minifyHTML():\n" + err);
+    }
 }
 
 async function minifyCSS(src) {
     const outputPath = "dist" + src.substring(3);
 
     fse.readFile(src, (err, css) => {
-        if (err) throw err;
+        if (err) console.error("Error at minifyCSS():\n" + err);
 
         postcss([autoprefixer])
             .process(css, { from: src, to: outputPath })
             .then(result => {
-                fse.outputFile(outputPath, result.css, (err) => { if (err) throw err; })
+                fse.outputFile(outputPath, result.css, (err) => { if (err) console.error("Error at minifyCSS():\n" + err); })
                 if (result.map) {
-                    fse.outputFile(outputPath, result.map, (err) => { if (err) throw err; })
+                    fse.outputFile(outputPath, result.map, (err) => { if (err) console.error("Error at minifyCSS():\n" + err); })
                 }
-                console.log("minifyCSS:\tOutput minified CSS " + outputPath);
+                console.log("Output minified CSS:\t" + outputPath);
             });
     });
 }
@@ -107,9 +106,12 @@ async function minifyCSS(src) {
 async function minifyJS(src) {
     const outputPath = "dist" + src.substring(3);
 
-    fse.readFile(src, "utf8", (err, js) => {
-        if (err) throw err;
-        console.log("minifyJS:\tOutput minified JS " + outputPath);
-        fse.outputFile(outputPath, UglifyJS.minify(js, UglifyOptions).code, (err) => { if (err) throw err; })
-    });
+    try {
+        const data = await fse.readFile(src, "utf8");
+        const jsResult = UglifyJS.minify(data, UglifyOptions).code;
+        await fse.outputFile(outputPath, jsResult, "utf8");
+        console.log("Output minified JS:\t" + outputPath);
+    } catch (err) {
+        console.error("Error at minifyJS():\n" + err);
+    }
 }
