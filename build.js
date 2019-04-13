@@ -25,6 +25,9 @@ const HTML_minifyOptions = {
     useShortDoctype: true
 }
 
+// Remove any old files from /dist before minification to ensure that only necessary files are deployed.
+fse.emptyDirSync("./dist");
+console.log("Emptied /dist");
 
 // Minify and copy files in parallel by running their respective functions async
 async.parallel([
@@ -33,6 +36,7 @@ async.parallel([
     minifyFiles(/\.css$/, minifyCSS),
     minifyFiles(/\.js$/, minifyJS)
 ]).catch((err) => { if (err.message !== "expected a function") console.error(err) });
+
 
 async function copyStaticFiles() {
     try {
