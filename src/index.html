@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
         <div class="container noselect">
             <div class="navbar-brand anchor-scroll">RidgeHacks</div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,11 +58,11 @@
             <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                        <img src="images/logo.svg" height=250vh></img>
-                        <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>RidgeHacks 2019</strong> - April 27th <br></h1>
-                        <h2 style="margin-bottom: 5rem!important; color:#b5b5ad">A New Jersey High School Hackathon</h2>
-                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="https://goo.gl/WZc2sL" target="_blank" class="btn btn-primary btn-outline-white px-5 py-3">Sign Up Now</a></p>
-                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="https://docs.google.com/forms/d/e/1FAIpQLSca-Ve9hc4up3oXGBw2Pzss_JMKwD4fAK07z2ZvPEnge4mfag/viewform" target="_blank" class="btn btn-primary btn-outline-white px-5 py-3">Volunteer/Mentor Sign Up</a></p>
+                        <img src="images/logo.svg" id="ridgehackslogo"></img>
+                        <h1 class="mb-4 rescale" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>RidgeHacks 2019</strong> - April 27th <br></h1>
+                        <h2 class="rescale" style="margin-bottom: 5rem!important; color:#b5b5ad">A New Jersey High School Hackathon</h2>
+                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" class="rescale"><a href="https://goo.gl/WZc2sL" target="_blank" class="btn btn-primary btn-outline-white px-5 py-3">Sign Up Now</a></p>
+                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" class="rescale"><a href="https://docs.google.com/forms/d/e/1FAIpQLSca-Ve9hc4up3oXGBw2Pzss_JMKwD4fAK07z2ZvPEnge4mfag/viewform" target="_blank" class="btn btn-primary btn-outline-white px-5 py-3">Volunteer/Mentor Sign Up</a></p>
                     </div>
                 </div>
             </div>
@@ -310,6 +310,16 @@
                         </div>
                         <div class="item text-center">
                             <div class="testimony-wrap p-4 pb-5">
+                                <div style="background-image: url(images/jc.jpg); background-position: top;" class="user-img mb-4">
+                                </div>
+                                <div class="text">
+                                    <p class="name">Jaclyn Chen</p>
+                                    <span class="position">Organizer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
                                 <div class="user-img mb-4" style="background-image: url(images/guy.jpg)">
                                 </div>
                                 <div class="text">
@@ -343,15 +353,15 @@
                         Looking to sponsor? Contact us at info@ridgehacks.com
                     </p>
                 </div>
-                <img class="sponsor-image ftco-animate" src="images/brba.png">
-                <img class="sponsor-image ftco-animate" src="images/computersharp.png">
-                <img style="padding: 4%;" class="sponsor-image ftco-animate" src="images/LGS.gif">
-                <img class="sponsor-image ftco-animate" src="images/linode.svg">
-                <img style="padding: 4%;" class="sponsor-image ftco-animate" src="images/intellect.png">
-                <img style="object-fit: cover;" class="sponsor-image ftco-animate" src="images/balsamiq.svg">
-                <img class="sponsor-image ftco-animate" src="images/aops.png">
-                <img class="sponsor-image ftco-animate" src="images/gitkraken.png">
-                <img class="sponsor-image ftco-animate" src="images/wolfram.png">
+                <img class="sponsor-image ftco-animate" id="brba" src="images/brba.png">
+                <img class="sponsor-image ftco-animate" id="computersharp" src="images/computersharp.png">
+                <img style="padding: 4%;" class="sponsor-image ftco-animate" id="lgs" src="images/LGS.gif">
+                <img class="sponsor-image ftco-animate" id="linode" src="images/linode.svg">
+                <img style="padding: 4%;" class="sponsor-image ftco-animate" id="intellect" src="images/intellect.png">
+                <img class="sponsor-image ftco-animate" id="balsamiq" src="images/balsamiq.png">
+                <img class="sponsor-image ftco-animate" id="aops" src="images/aops.png">
+                <img class="sponsor-image ftco-animate" id="gitkraken" src="images/gitkraken.png">
+                <img class="sponsor-image ftco-animate" id="wolfram" src="images/wolfram.png">
             </div>
         </div>
     </section>

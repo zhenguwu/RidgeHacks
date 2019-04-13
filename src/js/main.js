@@ -111,6 +111,42 @@
 	  console.log('show');
 	});
 
+	$("#brba").click(function() {
+		window.open("https://www.ridgebusiness.org/", "_blank");
+	});
+
+	$("#computersharp").click(function() {
+		window.open("https://computersharp.com/", "_blank");
+	});
+
+	$("#lgs").click(function() {
+		window.open("https://www.lgsinnovations.com/", "_blank");
+	});
+
+	$("#linode").click(function() {
+		window.open("https://www.linode.com/", "_blank");
+	});
+
+	$("#intellect").click(function() {
+		window.open("https://www.intellectseec.com/", "_blank");
+	});
+	
+	$("#balsamiq").click(function() {
+		window.open("https://balsamiq.com/", "_blank");
+	});
+
+	$("#aops").click(function() {
+		window.open("https://artofproblemsolving.com/", "_blank");
+	});
+
+	$("#gitkraken").click(function() {
+		window.open("https://www.gitkraken.com/", "_blank");
+	});
+
+	$("#wolfram").click(function() {
+		window.open("https://www.wolfram.com/language/", "_blank");
+	});
+	
 	// scroll
 	var scrollWindow = function() {
 		$(window).scroll(function(){
