@@ -29,13 +29,14 @@ const HTML_minifyOptions = {
 fse.emptyDirSync("./dist");
 console.log("Emptied /dist");
 
+
 // Minify and copy files in parallel by running their respective functions async
 async.parallel([
     copyStaticFiles(),
     minifyFiles(/\.html$/, minifyHTML),
     minifyFiles(/\.css$/, minifyCSS),
     minifyFiles(/\.js$/, minifyJS)
-]).catch((err) => { if (err.message !== "expected a function") console.error(err) });
+]).catch((err) => { if (err.message !== "") console.error(err) });
 
 
 async function copyStaticFiles() {
@@ -46,7 +47,7 @@ async function copyStaticFiles() {
         });
         console.log('Finished copying static files.');
     } catch (err) {
-        console.error(err);
+        console.error("Error at copyStaticFiles():\n" + err);
     }
 }
 
@@ -55,16 +56,20 @@ async function minifyFiles(filter, minificationFunction) {
     find.file(filter, "./src", (files) => {
         try {
             var queue = async.queue(minificationFunction, files.length);
-        } catch (e) {
-            if (e instanceof RangeError) console.error("ERROR!: Unable to find any files of file type: " + filter);
+        } catch (err) {
+            if (err instanceof RangeError) {
+                console.error("WARNING!: Unable to find any files of file type: " + filter);
+            } else {
+                console.error("Error at creating queue in minifyFiles():\n" + err);
+            }
             return;
         }
 
         // add files to the queue (batch-wise)
         queue.push(files, function (err) {
-            if (err) throw err;
+            if (err) console.error("Error at pushing queue in minifyFiles():\n" + err);
         });
-    }).error((err) => { if (err) throw err; });
+    }).error((err) => { console.error("Error at minifyFiles():\n" + err) });
 }
 
 async function minifyHTML(src) {
