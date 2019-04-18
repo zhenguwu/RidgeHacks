@@ -146,6 +146,10 @@
 	$("#wolfram").click(function() {
 		window.open("https://www.wolfram.com/language/", "_blank");
 	});
+
+	$("#starbucks").click(function() {
+		window.open("https://www.starbucks.com/", "_blank");
+	});
 	
 	// scroll
 	var scrollWindow = function() {
