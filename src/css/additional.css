@@ -58,7 +58,7 @@ li:hover .nav-link {
     }
 }
 
-@media (max-width: 600px), (max-height: 700px) {
+@media (max-width: 600px), (max-height: 800px) {
     #ridgehackslogo {
         height: 125px;
     }
@@ -67,7 +67,7 @@ li:hover .nav-link {
     }
 }
 
-@media (min-width: 600.5px) and (min-height: 700.5px) {
+@media (min-width: 600.5px) and (min-height: 800.5px) {
     #ridgehackslogo {
         height: 250px;
     }
