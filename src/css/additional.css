@@ -511,7 +511,7 @@ tr:hover {
     padding-bottom: 0.75rem;
 }
 
-#schedule2 {
+.scheduleMobile {
     display: none;
 }
 #fixed-width {
@@ -520,10 +520,10 @@ tr:hover {
     flex: 0 0 100%!important;
     max-width: 100%!important; }
 @media (max-width: 991.5px) {
-    #schedule2 {
+    .scheduleMobile {
         display: block;
     }
-    #schedule {
+    .schedule {
         display: none;
     }
 }
