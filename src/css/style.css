@@ -913,7 +913,7 @@ pre {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
-    max-width: 75; }
+    max-width: 75%; }
   .col-md-8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 66.66667%;

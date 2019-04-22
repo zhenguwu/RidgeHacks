@@ -59,18 +59,20 @@
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                         <img src="images/logo.svg" id="ridgehackslogo"></img>
                         <h1 class="mb-4 rescale" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>RidgeHacks 2019</strong> - April 27th <br></h1>
-                        <h2 class="rescale" style="margin-bottom: 5rem!important; color:#b5b5ad">A New Jersey High School Hackathon</h2>
+                        <h2 class="rescale" style="color:#b5b5ad">A New Jersey High School Hackathon</h2>
+                        </br>
                         <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" class="rescale"><a href="https://goo.gl/WZc2sL" target="_blank" class="btn btn-primary btn-outline-white px-5 py-3">Sign Up Now</a></p>
-                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" class="rescale"><a href="https://docs.google.com/forms/d/e/1FAIpQLSca-Ve9hc4up3oXGBw2Pzss_JMKwD4fAK07z2ZvPEnge4mfag/viewform" target="_blank" class="btn btn-primary btn-outline-white px-5 py-3">Volunteer/Mentor Sign Up</a></p>
+                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" class="rescale"><a href="https://docs.google.com/forms/d/e/1FAIpQLSca-Ve9hc4up3oXGBw2Pzss_JMKwD4fAK07z2ZvPEnge4mfag/viewform" target="_blank" class="btn btn-primary btn-outline-white px-5 py-2-5">Volunteer/Mentor Sign Up</a></p>
+                        <h2 id="waiver_toggle" class="rescale btn btn-primary btn-outline-white px-5 py-2-5">Participant Waiver</h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="ftco-section" id="schedule">
-        <div class="container">
+        <div class="container" id="schedule-container">
             <div class="row no-gutters justify-content-center mb-5 pb-5">
-                <div class="col-md-7 heading-section ftco-animate">
+                <div class="col-md-7 heading-section ftco-animate" id="fixed-width">
                     <h2 class="mb-4 text-center">Schedule</h2>
                     <table class="events">
                         <tr>
@@ -120,6 +122,53 @@
                         <tr>
                             <td class="time"><strong>9:45 PM - 10:30 PM</strong></td>
                             <td class="event">Demos & Closing Ceremony</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+   <section class="ftco-section" id="schedule2">
+        <div class="container">
+            <div class="row no-gutters justify-content-center mb-5 pb-5">
+                <div class="col-md-7 heading-section ftco-animate" id="fixed-width">
+                    <h2 class="mb-4 text-center">Schedule</h2>
+                    <table class="events">
+                        <tr>
+                            <td class="time2"><strong>8:00 AM - 8:30 AM:</strong></br>Check In</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>8:30 AM - 9:00 AM:</strong></br>Opening Ceremony</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>9:00 AM:</strong></br>Hacking Starts</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>9:00 AM - 10:00 AM:</strong></br>Breakfast</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>11:00 AM - 12:00 PM:</strong></br>Workshop 1</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>12:00 PM - 1:00 PM:</strong></br>Lunch</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>2:00 PM - 2:30 PM:</strong></br>Cup Stacking</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>4:00 PM - 5:00 PM:</strong></br>Workshop 2</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>6:00 PM - 7:00 PM:</strong></br>Dinner</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>9:00 PM:</strong></br>Hacking Ends</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>9:00 PM - 9:45 PM:</strong></br>Judging</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>9:45 PM - 10:30 PM:</strong></br>Demos & Closing Ceremony</td>
                         </tr>
                     </table>
                 </div>
@@ -237,6 +286,14 @@
                 </div>
                 <br>
                 <div class="row">
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <h3>What can I make?</h3>
+                                <span>Anything you want - hardware, software, or a mix!</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
                             <div class="text">
@@ -361,7 +418,8 @@
                 <img class="sponsor-image ftco-animate" id="aops" src="images/aops.png">
                 <img class="sponsor-image ftco-animate" id="gitkraken" src="images/gitkraken.png">
                 <img class="sponsor-image ftco-animate" id="wolfram" src="images/wolfram.png">
-                <img class="sponsor-image ftco-animate" id="starbucks" src="images/starbucks.jpg">
+                <img class="sponsor-image ftco-animate" id="starbucks" src="images/starbucks.png">
+                <img class="sponsor-image ftco-animate" id="temboo" src="images/temboo.png">
             </div>
         </div>
     </section>
@@ -407,6 +465,11 @@
             </div>
         </div>
     </footer>
+    <div id = "waiver"> 
+        <object data="waiver/waiver.pdf" type="application/pdf" id="pdf">
+        alt: <a id="pdf_alt" href="https://docs.google.com/document/d/1zWo4wQNK_cLjrhJJoe9OrZNGRbFys2944wHbQj5cHx4/edit?usp=sharing" target="_blank">Click here to open waiver</a>
+        </object>
+    </div> 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />

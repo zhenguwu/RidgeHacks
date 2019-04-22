@@ -106,11 +106,6 @@
 		// }, 100);
 	});
 
-
-	$('#dropdown04').on('show.bs.dropdown', function () {
-	  console.log('show');
-	});
-
 	$("#brba").click(function() {
 		window.open("https://www.ridgebusiness.org/", "_blank");
 	});
@@ -150,6 +145,16 @@
 	$("#starbucks").click(function() {
 		window.open("https://www.starbucks.com/", "_blank");
 	});
+
+	$("#waiver_toggle").click(function() {
+		$("#waiver").fadeIn(250);
+	});
+	$("#waiver").click(function() {
+		$("#waiver").fadeOut(250);
+	})
+	$("#temboo").click(function() {
+		window.open("https://temboo.com/", "_blank");
+	})
 	
 	// scroll
 	var scrollWindow = function() {
