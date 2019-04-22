@@ -17,8 +17,6 @@ AOS.init({
 		scrollProperty: 'scroll'
 	});
 
-	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
 	var fullHeight = function () {
 
 		$('.js-fullheight').css('height', $(window).height());
@@ -127,12 +125,7 @@ AOS.init({
 	});
 
 	$("#waiver_toggle").click(function () {
-		if (isMobile)
-		{
-			window.location.href = "https://docs.google.com/document/d/1zWo4wQNK_cLjrhJJoe9OrZNGRbFys2944wHbQj5cHx4/edit?usp=sharing";
-		} else {
-			$("#waiver").fadeIn(250);
-		}
+		window.open("https://ridgehacks.com/waiver/waiver.pdf", "_blank");
 	});
 	$("#waiver").click(function () {
 		$("#waiver").fadeOut(250);
