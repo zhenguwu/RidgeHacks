@@ -1,7 +1,5 @@
 node_modules/
 
-package-lock\.json
-
 RidgeHacksSite\.sln
 
 RidgeHacksSite\.njsproj
