@@ -9,7 +9,7 @@
     "find": "^0.3.0",
     "fs-extra": "^7.0.1",
     "html-minifier": "^4.0.0",
-    "uglify-js": "^3.5.4"
+    "uglify-js": "^3.5.6"
   },
   "devDependencies": {},
   "scripts": {
