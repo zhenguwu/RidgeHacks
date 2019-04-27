@@ -64,6 +64,43 @@ AOS.init({
 
 	};
 	carousel();
+	var database = firebase.database();
+	/*database.ref("announcements/").once('value', function(snapshot) {
+		snapshot.forEach(function(data) {
+			addEvent(data.key, data.val());
+		});
+	});*/
+	database.ref("announcements/").on('child_changed', function(data) {
+		console.log("Child updated: " + data.key);
+		changeEvent(data.key, data.val());
+
+	});
+	database.ref("announcements/").on('child_added', function(data) {
+		console.log("Child added: " + data.key + "	" + data.val()); 
+		addEvent(data.key, data.val());
+	});
+	database.ref("announcements/").on('child_removed', function(data) {
+		console.log("Child removed: " + data.key);
+		deleteEvent(data.key);
+	});
+
+	var addEvent = function(name, description) {
+		$("#live_table").prepend("<tr id='" + name.slice(0, 1) + "'>" + "<td class='name1'>" + name + "</td><td class='description'>" + description + "</td></tr>");
+	};
+	var deleteEvent = function(name) {
+		$("#" + name.slice(0,1)).remove();
+	};
+	var changeEvent = function(name, description) {
+		$("#" + name.slice(0,1)).html("<td class='name'>" + name + "</td><td class='description'>" + description + "</td>");
+	}
+	$("#live_page_toggle").click(function() {
+		$("#main_page").hide(250);
+		$("#live_page").show(250);
+	});
+	$("#live_back").click(function() {
+		$("#live_page").hide(250);
+		$("#main_page").show(250);
+	})
 
 	$('nav .dropdown').hover(function () {
 		var $this = $(this);
@@ -129,10 +166,19 @@ AOS.init({
 	});
 	$("#waiver").click(function () {
 		$("#waiver").fadeOut(250);
-	})
+	});
 	$("#temboo").click(function () {
 		window.open("https://temboo.com/", "_blank");
-	})
+	});
+	$("#bvillepc").click(function() {
+		window.open("http://bernardsvilleprinting.com/", "_blank");
+	});
+	$("#digitalocean").click(function() {
+		window.open("https://www.digitalocean.com/", "_blank");
+	});
+	$("#sketch").click(function() {
+		window.open("https://www.sketch.com/", "_blank");
+	});
 
 	// scroll
 	var scrollWindow = function () {

@@ -26,9 +26,35 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCHvBBm5R2gkfrb-i1euxyux0sC9YmYNDw",
+        authDomain: "ridgehacks-174d5.firebaseapp.com",
+        databaseURL: "https://ridgehacks-174d5.firebaseio.com",
+        projectId: "ridgehacks-174d5",
+        storageBucket: "ridgehacks-174d5.appspot.com",
+        messagingSenderId: "77306774114"
+    };
+    firebase.initializeApp(config);
+    </script>
 </head>
 
 <body>
+    <div id="live_page" class="js-fullheight">
+        <center>
+            <div id="live_back_container">
+                <h2 id="live_back" class="rescale btn btn-primary btn-outline-white px-5 py-2-5">Back to main page</h2>
+            </div>
+            <h2 style="color: white"><strong>Annoucements</strong></h2>
+            <div id="live_table_container">
+            <table id="live_table">
+            </table>
+        </div>
+        </center>
+    </div>
+    <div id="main_page">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
         <div class="container noselect">
             <div class="navbar-brand anchor-scroll">RidgeHacks</div>
@@ -46,7 +72,7 @@
                     <li class="nav-item cta"><a class="nav-link cta-none anchor-scroll" href="#what-is-a-hackathon">What is a Hackathon?</a></li>
                     <li class="nav-item cta"><a href="#faq" class="nav-link cta-none anchor-scroll">FAQ</a></li>
                     <li class="nav-item cta"><a href="#sponsors" class="nav-link cta-none anchor-scroll">Sponsors</a></li>
-                    <li class="nav-item cta sign-up-btn"><a href="https://goo.gl/WZc2sL" target="_blank" class="nav-link cta-none" style=" margin-left: 1rem!important">Sign Up</a></li>
+                    <li class="nav-item cta sign-up-btn"><a href="https://goo.gl/WZc2sL" target="_blank" class="nav-link cta-none">Sign Up</a></li>
                 </ul>
             </div>
         </div>
@@ -65,8 +91,8 @@
                         <h2 class="rescale" style="color:#b5b5ad">A New Jersey High School Hackathon</h2>
                         </br>
                         <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" class="rescale"><a href="https://goo.gl/WZc2sL" target="_blank" class="btn btn-primary btn-outline-white px-5 py-3">Sign Up Now</a></p>
-                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" class="rescale"><a href="https://docs.google.com/forms/d/e/1FAIpQLSca-Ve9hc4up3oXGBw2Pzss_JMKwD4fAK07z2ZvPEnge4mfag/viewform" target="_blank" class="btn btn-primary btn-outline-white px-5 py-2-5">Volunteer/Mentor Sign Up</a></p>
-                        <h2 id="waiver_toggle" class="rescale btn btn-primary btn-outline-white px-5 py-2-5">Participant Waiver</h2>
+                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" class="rescale"><a id="live_page_toggle" target="_blank" class="btn btn-primary btn-outline-white px-5 py-2-5">Live Page</a></p>
+                        <h2 data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" id="waiver_toggle" class="rescale btn btn-primary btn-outline-white px-5 py-2-5">Participant Waiver</h2>
                     </div>
                 </div>
             </div>
@@ -95,8 +121,11 @@
                             <td class="event">Breakfast</td>
                         </tr>
                         <tr>
+                            <td class="time"><strong>10:00 AM</strong></td>
+                            <td class="event">Smash Tournament Starts</td>
+                        <tr>
                             <td class="time"><strong>11:00 AM - 12:00 PM</strong></td>
-                            <td class="event">Workshop 1</td>
+                            <td class="event">GitHub Workshop</td>
                         </tr>
                         <tr>
                             <td class="time"><strong>12:00 PM - 1:00 PM</strong></td>
@@ -107,8 +136,8 @@
                             <td class="event">Cup Stacking</td>
                         </tr>
                         <tr>
-                            <td class="time"><strong>4:00 PM - 5:00 PM</strong></td>
-                            <td class="event">Workshop 2</td>
+                            <td class="time"><strong>4:00 PM - 6:00 PM</strong></td>
+                            <td class="event">MLH Localhost Website Design</td>
                         </tr>
                         <tr>
                             <td class="time"><strong>6:00 PM - 7:00 PM</strong></td>
@@ -119,11 +148,11 @@
                             <td class="event">Hacking Ends</td>
                         </tr>
                         <tr>
-                            <td class="time"><strong>9:00 PM - 9:45 PM</strong></td>
+                            <td class="time"><strong>9:15 PM - 9:45 PM</strong></td>
                             <td class="event">Judging</td>
                         </tr>
                         <tr>
-                            <td class="time"><strong>9:45 PM - 10:30 PM</strong></td>
+                            <td class="time"><strong>10:00 PM - 10:45 PM</strong></td>
                             <td class="event">Demos & Closing Ceremony</td>
                         </tr>
                     </table>
@@ -150,7 +179,10 @@
                             <td class="time2"><strong>9:00 AM - 10:00 AM:</strong></br>Breakfast</td>
                         </tr>
                         <tr>
-                            <td class="time2"><strong>11:00 AM - 12:00 PM:</strong></br>Workshop 1</td>
+                            <td class="time2"><strong>10:00 AM:</strong></br>Smash Tournament Starts</td>
+                        </tr>
+                        <tr>
+                            <td class="time2"><strong>11:00 AM - 12:00 PM:</strong></br>GitHub Workshop</td>
                         </tr>
                         <tr>
                             <td class="time2"><strong>12:00 PM - 1:00 PM:</strong></br>Lunch</td>
@@ -159,7 +191,7 @@
                             <td class="time2"><strong>2:00 PM - 2:30 PM:</strong></br>Cup Stacking</td>
                         </tr>
                         <tr>
-                            <td class="time2"><strong>4:00 PM - 5:00 PM:</strong></br>Workshop 2</td>
+                            <td class="time2"><strong>4:00 PM - 6:00 PM:</strong></br>MLH Localhost Website Design</td>
                         </tr>
                         <tr>
                             <td class="time2"><strong>6:00 PM - 7:00 PM:</strong></br>Dinner</td>
@@ -168,10 +200,10 @@
                             <td class="time2"><strong>9:00 PM:</strong></br>Hacking Ends</td>
                         </tr>
                         <tr>
-                            <td class="time2"><strong>9:00 PM - 9:45 PM:</strong></br>Judging</td>
+                            <td class="time2"><strong>9:15 PM - 9:45 PM:</strong></br>Judging</td>
                         </tr>
                         <tr>
-                            <td class="time2"><strong>9:45 PM - 10:30 PM:</strong></br>Demos & Closing Ceremony</td>
+                            <td class="time2"><strong>10:00 PM - 10:45 PM:</strong></br>Demos & Closing Ceremony</td>
                         </tr>
                     </table>
                 </div>
@@ -424,7 +456,8 @@
                 <img class="sponsor-image ftco-animate" id="starbucks" src="images/starbucks.png">
                 <img class="sponsor-image ftco-animate" id="temboo" src="images/temboo.png">
                 <img class="sponsor-image ftco-animate" id="bvillepc" src="images/bernardsvilleprint.png">
-
+                <img class="sponsor-image ftco-animate" id="digitalocean" src="images/digitalocean.png">
+                <img class="sponsor-image ftco-animate" id="sketch" src="images/sketch.png">
             </div>
         </div>
     </section>
@@ -497,6 +530,7 @@
     <script src="js/scrollax.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/main.js"></script>
+    </div>
 </body>
 
 </html>

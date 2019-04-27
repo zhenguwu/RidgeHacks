@@ -367,7 +367,8 @@ li:hover .nav-link {
 }
 
 #particles-js,
-#particles-js2 {
+#particles-js2,
+#particles-js3 {
     position: absolute;
     top: 0;
     left: 0;
@@ -375,6 +376,9 @@ li:hover .nav-link {
     right: 0;
     width: 100%;
     height: 100%;
+}
+#particles-js3 { 
+    position: static;
 }
 
 .noselect {
@@ -495,7 +499,8 @@ tr:hover {
 }
 #waiver_toggle:hover {
     cursor: pointer;
-    color: black;
+    color: white;
+    background-color: transparent!important;
 }
 #waiver_toggle {
     background-color: white;
@@ -526,4 +531,57 @@ tr:hover {
     .schedule {
         display: none;
     }
+}
+#live_page_toggle {
+    background-color: white;
+    color: red;
+}
+#live_page {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: #0d300f;
+    background: -moz-linear-gradient(45deg, #3aa542 0%, #0d300f 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #3aa542), color-stop(100%, #0d300f));
+    background: -webkit-linear-gradient(45deg, #3aa542 0%, #0d300f 100%);
+    background: -o-linear-gradient(45deg, #3aa542 0%, #0d300f 100%);
+    background: -ms-linear-gradient(45deg, #3aa542 0%, #0d300f 100%);
+    background: linear-gradient(45deg, #3aa542 0%, #0d300f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1);
+}
+#live_page_toggle:hover {
+    color: white;
+    background-color: transparent!important;
+}
+#live_back {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+#live_back_container {
+     width: 100%;
+     height: auto;
+}
+#live_table {
+    border: 2px solid #d6d6d6;
+    border-collapse: separate;
+    font-size: 20px;
+    vertical-align: middle;
+    border-radius: 5px;
+    background-color: white;
+    white-space: nowrap
+
+}
+.name1, .description {
+    padding: 25px;
+    text-align: left;
+}
+#live_table_container {
+    overflow: auto;
+    max-height: 70%;
+    max-width: 90%;
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }

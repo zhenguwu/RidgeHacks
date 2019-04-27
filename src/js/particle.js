@@ -112,8 +112,6 @@ particlesJS("particles-js", {
     vendors:{}
   }
 });
-
-// ParticlesJS Config.
 particlesJS("particles-js2", {
   "particles": {
     "number": {
@@ -184,7 +182,7 @@ particlesJS("particles-js2", {
     }
   },
   "interactivity": {
-    "detect_on": "canvas",
+    "detect_on": "window",
     "events": {
       "onhover": {
         "enable": true,
